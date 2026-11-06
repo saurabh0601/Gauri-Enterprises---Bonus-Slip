@@ -22,7 +22,7 @@ function normalizeEmployeeId(raw) {
   const match = cleaned.match(/^(?:GE)?(\d{1,4})$/);
   if (!match) return null;
   const number = Number(match[1]);
-  if (!Number.isInteger(number) || number < 1 || number > 99) return null;
+  if (!Number.isInteger(number) || number < 1 || number > 199) return null;
   return `GE${String(number).padStart(4, "0")}`;
 }
 
@@ -55,7 +55,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const employeeId = normalizeEmployeeId(input.value);
   if (!employeeId) {
-    showMessage("Please enter a valid Employee ID from GE0001 to GE0099 (for example: GE0004).", "error");
+    showMessage("Please enter a valid Employee ID from GE0001 to GE0199 (for example: GE0004).", "error");
     input.focus();
     return;
   }
