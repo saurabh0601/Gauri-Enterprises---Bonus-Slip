@@ -1,0 +1,1 @@
+Copy employee JPG files into this folder. Example: GE0004.jpg

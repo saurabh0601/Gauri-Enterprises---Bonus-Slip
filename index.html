@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#54142d">
+  <title>Gauri Enterprises | Festival Bonus Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Gauri Enterprises home">
+      <span class="brand-mark">GE</span>
+      <span><strong>GAURI ENTERPRISES</strong><small>PEOPLE • PROGRESS • PROSPERITY</small></span>
+    </a>
+    <span class="top-tag"><span class="live-dot"></span> EMPLOYEE PORTAL</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="festival-label"><span>✦</span> A CELEBRATION OF TOGETHERNESS <span>✦</span></div>
+      <div class="diya-row" aria-hidden="true"><span>✧</span><span class="diya">🪔</span><span>✧</span></div>
+      <h1>A little joy.<br><em>A brighter celebration.</em></h1>
+      <p class="intro">Your hard work makes our journey brighter. Find and view your Festival Bonus Slip below.</p>
+
+      <section class="search-card" aria-label="Find your bonus slip">
+        <div class="search-heading">
+          <span class="search-icon">⌕</span>
+          <div><h2>Find your bonus slip</h2><p>Enter your Employee ID to continue</p></div>
+        </div>
+        <form id="searchForm" autocomplete="off">
+          <label for="employeeId">EMPLOYEE ID</label>
+          <div class="input-wrap">
+            <span class="id-prefix">GE</span>
+            <input id="employeeId" name="employeeId" type="text" maxlength="10"
+              placeholder="e.g. GE0004" aria-describedby="idHint" required>
+            <button type="submit" id="searchButton"><span>SEARCH</span><b>→</b></button>
+          </div>
+          <div class="input-foot"><span id="idHint">Search using your ID in capital letters.</span><span>GE0001 — GE0099</span></div>
+        </form>
+        <div id="result" class="result" role="status" aria-live="polite"></div>
+      </section>
+      <div class="trust-line"><span>✦</span> A special thank-you for being part of our team <span>✦</span></div>
+    </section>
+
+    <section class="how-section">
+      <div class="section-kicker">QUICK & SIMPLE</div>
+      <h2>Three steps to your slip</h2>
+      <div class="steps">
+        <article class="step"><span class="step-number">01</span><div class="step-icon">⌨</div><h3>Enter your ID</h3><p>Type your employee code in the search box.</p></article>
+        <article class="step"><span class="step-number">02</span><div class="step-icon">✦</div><h3>View your slip</h3><p>Your matching Festival Bonus Slip will appear.</p></article>
+        <article class="step"><span class="step-number">03</span><div class="step-icon">↓</div><h3>Download it</h3><p>Save a copy of your slip for your records.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand">GAURI ENTERPRISES</div><p>Celebrating the people who make us stronger.</p><small>© <span id="year"></span> Gauri Enterprises. All rights reserved.</small></footer>
+
+  <div id="viewer" class="viewer" aria-hidden="true">
+    <div class="viewer-panel" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
+      <div class="viewer-head"><div><span class="viewer-kicker">FESTIVAL BONUS SLIP</span><h2 id="viewerTitle">Employee Slip</h2></div><button class="close-viewer" id="closeViewer" aria-label="Close">×</button></div>
+      <div class="preview-wrap"><img id="slipImage" alt="Festival bonus slip preview"></div>
+      <div class="viewer-actions"><a id="downloadLink" class="download-btn" download>↓ DOWNLOAD SLIP</a><button id="closeViewerBottom" class="secondary-btn">CLOSE</button></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
